@@ -38,7 +38,11 @@ def add_bouquet_design(data):
 
 def add_flower(data):
   """Parse data input and add flower to our data set"""
-  return
+  if data in FLOWERS:
+    FLOWERS[data] += 1
+  else:
+    FLOWERS[data] = 1
+  
 
 def main():
   listening = True
@@ -55,10 +59,11 @@ def main():
 
         elif is_flower(data):
           print("flower")
+          add_flower(data)
 
     except EOFError:
       break
 
 
-if __code__ == '__main__':
+if __name__ == '__main__':
     main()
