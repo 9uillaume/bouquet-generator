@@ -2,4 +2,4 @@ FROM python:3.7-alpine
 
 COPY . .
 
-CMD python app.py
+CMD cat samples/sample.txt | python3 app.py
